@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Arrière-plan avec effet flou */
+.quiz-container {
+    background: url('background.jpg') center/cover no-repeat;
+    backdrop-filter: blur(15px);
+    padding: 0 15px;
+  }
+  
+  /* Style de la carte en verre dépoli */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+/* Style pour les boutons néon avec bordures arrondies et nouvelle couleur au survol */
+.neon-btn {
+    border: 2px solid transparent;
+    position: relative;
+    color: #ffffff;
+    background-color: #007bff; /* Couleur de fond bleu par défaut */
+    border-radius: 10px; /* Rayon des bordures augmenté */
+    text-transform: uppercase;
+    transition: background-color 0.4s, color 0.4s, border 0.4s;
+  }
+  
+  .neon-btn:hover {
+    background-color: #28a745; /* Couleur de fond verte au survol */
+    color: #ffffff; /* Couleur du texte au survol */
+    border: 2px solid #ffffff; /* Couleur de la bordure au survol */
+  }
+
+  /* Style personnalisé pour la question */
+/* Simple and clean style for the question */
+.question-simple {
+    font-size: 1.4rem; /* Moderate font size */
+    font-weight: 500; /* Semi-bold */
+    color: #333; /* Dark gray text for contrast */
+    margin: 20px 0; /* Spacing above and below */
+    text-align: center; /* Centered text */
+  }
+
+  .next-btn{
+    margin-left: 12%;
+  }
+  
+  
+  
+  
+  
+  
