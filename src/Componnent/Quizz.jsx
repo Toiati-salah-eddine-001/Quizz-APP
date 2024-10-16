@@ -29,7 +29,7 @@ const Quizz = () => {
         Check ? 
         <>
         <h3>Your correct question is {correctans} </h3> 
-        <button onClick={()=>window.location.reload()}>Reload</button>
+        <button onClick={()=>window.location.reload()}>Reset</button>
         </>
         :
         (
