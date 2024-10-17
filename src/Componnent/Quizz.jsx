@@ -8,28 +8,34 @@ const Quizz = () => {
   const [count, setcount] = useState(0);
   const [correctans, setcorrectans] = useState(0);
   const [Check, setchek] = useState(false);
+  const [oneclick, setoneclick] = useState(true);
   const btn=useRef(null);
+  const buttons = document.querySelectorAll('.neon-btn');
 
   const Nextquestion = () => {
     if (count < ListQuestion.length - 1) {
       setcount(count + 1);
-      const buttons = document.querySelectorAll('.neon-btn');
       buttons.forEach(button => button.style.backgroundColor = "");
-
     } else {
       setchek(true);
     }
+    setoneclick(true);
   };
 
-  const Chekcorrect = (condition,e,id) => {
-    if (condition) {
-      setcorrectans(correctans + 1);
-        console.log(e.target);
-        e.target.style.backgroundColor="green";
-    }else if(!condition){
-        e.target.style.backgroundColor="red";
-    }
-  };
+  console.log(buttons);
+  
+  const Chekcorrect = (condition,e) => {
+  if(oneclick){
+      if (condition) {
+        setcorrectans(correctans + 1);
+          e.target.style.backgroundColor="green";
+          setoneclick(false)
+      }else if(!condition){
+          e.target.style.backgroundColor="red";
+          setoneclick(false)
+      }
+    };
+  }
   console.log(correctans);
   return (
     <>
