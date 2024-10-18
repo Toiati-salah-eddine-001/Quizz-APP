@@ -32,6 +32,16 @@ const Quizz = () => {
           setoneclick(false)
       }else if(!condition){
           e.target.style.backgroundColor="red";
+          const trueAnswer = ListQuestion[count].answeres.find((item) => item.isCorrect);
+          console.log(trueAnswer);
+          // const trueAnswerButton = buttons.find((button) => button.value === trueAnswer.ans);
+          buttons.forEach(button =>{
+            if(button.value === trueAnswer.ans){
+              button.style.backgroundColor="green";
+            }
+          });
+          // console.log(trueAnswerButton);
+          // trueAnswerButton.style.backgroundColor = "green";
           setoneclick(false)
       }
     };
@@ -63,6 +73,7 @@ const Quizz = () => {
                 {ListQuestion[count].answeres.map((items, index) => (
                   <button
                     key={index}
+                    value={items.ans}
                     className="btn btn-outline-light neon-btn btn-lg w-75"
                     onClick={(e) => Chekcorrect(items.isCorrect,e,index)}
                   >
