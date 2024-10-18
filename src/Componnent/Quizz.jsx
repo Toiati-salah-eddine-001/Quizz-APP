@@ -34,14 +34,11 @@ const Quizz = () => {
           e.target.style.backgroundColor="red";
           const trueAnswer = ListQuestion[count].answeres.find((item) => item.isCorrect);
           console.log(trueAnswer);
-          // const trueAnswerButton = buttons.find((button) => button.value === trueAnswer.ans);
           buttons.forEach(button =>{
             if(button.value === trueAnswer.ans){
               button.style.backgroundColor="green";
             }
           });
-          // console.log(trueAnswerButton);
-          // trueAnswerButton.style.backgroundColor = "green";
           setoneclick(false)
       }
     };
